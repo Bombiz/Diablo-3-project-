@@ -8,8 +8,11 @@ when you  enter your battle tag a list of all your current heroes is generated a
 
 To do
 -------------
+
 show what league the character is in
+
 show currently equipped items
+
 add images for all skills and runes shown.
 
 
