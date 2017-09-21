@@ -24,7 +24,11 @@ foreach ($json['skills']['active'] as $key => $value) {
   */
   $skill['name'] = 'N/A';        
   $rune['name'] = 'N/A';
-
+  
+  /*
+  each Skill has 2 parts to it. The 'Skill' part and the 'rune' part. 
+  the Skill part is just the main skill while the rune part is the rune that modifies the skill
+  */
   foreach ($json['skills']['active'][$key] as $key => $value) {
 
     if ($key == 'skill' ) {
@@ -49,6 +53,5 @@ foreach ($json['skills']['active'] as $key => $value) {
 holding all the active skills and associating runes*/
 $activeskills[]=$allskills;
 $activeskills[]=$allrunes;
-var_dump($allrunes);
 
 ?>
