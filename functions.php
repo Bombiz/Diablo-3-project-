@@ -1,32 +1,5 @@
 <?php
 
-
-#require_once("postClass.php");
-function TableBody($ff, $l, $prov, $html_output="") {
-
-  $html_output.="<td>$ff</td>\n";
-  $html_output.="<td>$l</td>\n";
-  $html_output.="<td>$prov</td>\n</tr>\n";
-
-  return $html_output;
-
-}
-
-function JSON_TABLE($json) {                                                                        
-  
-  foreach($json->heroes as $item)
-  {
-	echo $item;
-    # foreach($json->heros->$hero as $item)
-    # {
-    #   echo $item;
-    # }   
-  }
-  
-}
-
-
-
 function UpdateDatabase($statment, $dbcon) {
 
   $updateStmnt=$dbcon->prepare($statment);
@@ -35,38 +8,6 @@ function UpdateDatabase($statment, $dbcon) {
 
 }
 
-function Table() {
-  $html="";
-  $html.="<th>First Name</th>";
-  $html.="<th>Last Name</th>";
-  $html.="<th>Province</th>";
-  $html.="</tr>";
-  return $html;
-}
-
-function ErrorBlank($user, $msg, $pass, $fname="d", $lname="d") {
-  if($user=="")
-  {
-   $msg.="Username should not be blank.<br>";
-  }
-
-  if($fname=="")
-  {
-   $msg.="First name should not be blank.<br>";
-  }
-
-  if($lname=="")
-  {
-   $msg.="Last name should not be blank.<br>";
-  }
-
-  if($pass=="")
-  {
-   $msg.="Password should not be blank.<br>";
-  }
-
-  return $msg;
-}
 
 function sql_result_one($sql, $dbcon) {
 
@@ -77,12 +18,6 @@ function sql_result_one($sql, $dbcon) {
    $stmnt->close();
 
    return  $result;
-}
-
-function Connection() {
-
-  $conn= new mysqli("localhost", "cs506_f14_6", "kombiz", "cs506_f14_6");
-  return $conn;
 }
 
 
